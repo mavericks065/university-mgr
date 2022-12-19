@@ -11,10 +11,11 @@ async function fetchUniversities(fetch, country: string) {
     return data;
 }
 
-export const load = (async ({fetch}) => {
-
+export const load = (async ({fetch, url}) => {
+    const searchCountry = url.searchParams.get('query') ?? '';
+    console.log(searchCountry)
     return {
-        universities: await fetchUniversities(fetch, 'France'),
+        universities: await fetchUniversities(fetch, searchCountry),
     };
 }) satisfies PageLoad;
 
