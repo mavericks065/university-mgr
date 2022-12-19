@@ -10,8 +10,8 @@
 </script>
 
 <div class="search-form">
-    <input type="text" bind:value={searchText}/>
-    <button on:click={onSearch}>Search</button>
+    <input type="text" bind:value={searchText} data-testid="universities-search-input"/>
+    <button on:click={onSearch} data-testid="universities-search-button">Search</button>
 </div>
 
 <style>

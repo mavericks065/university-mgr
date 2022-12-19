@@ -21,6 +21,8 @@
 
 <SearchForm on:search={onSearch}/>
 
+<h3 data-test="title">Universities found</h3>
+
 {#if universities.length > 0}
 	<ul>
 		{#each universities as item}
